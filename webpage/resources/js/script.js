@@ -1,7 +1,7 @@
 "use strict";
 
 //Define variables
-const infiniteRolls = true; //For testing only
+const infiniteRolls = false; //For testing only
 let multiplayer = true;
 let currentPlayer = "player1";
 const diceNumbers = [0, 0, 0, 0, 0];
