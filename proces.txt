@@ -1,0 +1,24 @@
+Dag 1
+Yahtzee game is gemaakt, veel tijd besteed vandaag en heel veel vooruitgang gamaakt.
+Het spel werkt bijna volledig.
+Volgende keer zou het beter zijn als ik prioriteit geef aan de game laten werken en dan werk aan animaties.
+
+Dag 2
+Multiplayer toegevoegd en page responsive gemaakt.
+Multiplayer was makkelijker dan verwacht, was erg snel toegevoegd.
+Volgende keer meer gebruik maken van objects, ik moest in dit geval sommige variables ombouwen naar objects.
+
+Dag 3
+Play again button toegevoegd.
+Was binnen een uurtje klaar, heel snel.
+Het hele project klaar in 3 dagen ben ik blij mee.
+Volgende keer is het misschien slim om bij te houden wat allemaal gereset moet worden terwijl ik de pagina opbouw in plaats van het allemaal aan het einde moeten bepalen.
+
+Evaluatie
+Ik ben blij met hoe het is gegaan.
+Ik heb binnen 3 dagen een product kunnen leveren waar ik blij mee ben.
+Het werkt goed en ik heb het snel kunnen bouwen, al had ik wat moeite met dingen laten werken af en toe.
+Ik heb een paar van de optionele dingen toegevoegd zoals multiplayer en een play again button.
+Ik heb door gewerkt tot ik vond dat het klaar was, en ik vind dat het goed is gelukt.
+Ik heb veel dingen moeten opzoeken terwijl ik bezig was en heb zo veel nieuwe dingen geleerd.
+Uiteindelijk was het makkelijker dan ik had verwacht, en ik heb het gevoel dat ik veel heb geleerd tijdens deze opdracht.

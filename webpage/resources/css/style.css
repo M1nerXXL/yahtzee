@@ -221,6 +221,22 @@ script {
   font-size: 1.5rem;
 }
 
+.play-again-button {
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  background-color: gray;
+}
+
+.play-again-button:hover {
+  background-color: rgb(200, 200, 200);
+}
+
+.play-again-button:active {
+  background-color: rgb(100, 100, 100);
+}
+
 @media (min-width: 2000px) {
   .score-card {
     width: 450px;
@@ -254,6 +270,12 @@ script {
   }
 
   .game-over__modal {
+    font-size: 3rem;
+  }
+
+  .play-again-button {
+    width: 300px;
+    height: 80px;
     font-size: 3rem;
   }
 }

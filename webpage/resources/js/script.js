@@ -1,7 +1,7 @@
 "use strict";
 
 //Define variables
-const infiniteRolls = true;
+const infiniteRolls = true; //For testing only
 let multiplayer = true;
 let currentPlayer = "player1";
 const diceNumbers = [0, 0, 0, 0, 0];
@@ -64,6 +64,7 @@ const gameOverPlayer2Score = document.querySelector(
   "#game-over__modal__player-2"
 );
 const gameOverWinner = document.querySelector("#game-over__modal__winner");
+const playAgainButton = document.querySelector(".play-again-button");
 
 //Choose gamemode
 singleplayerButton.addEventListener("click", function () {
@@ -396,4 +397,36 @@ nextButton.addEventListener("click", function () {
     diceLocked[i] = false;
     dice[i].style.boxShadow = "none";
   }
+});
+
+//Reset game
+playAgainButton.addEventListener("click", function () {
+  gameOver.classList.add("hidden");
+  gameSelector.classList.remove("hidden");
+  for (let i = 0; i < dice.length; i++) {
+    dice[i].style.transform = "none";
+    setTimeout(() => {
+      diceLocked[i] = false;
+    }, 500);
+  }
+  rollButton.disabled = false;
+  rollsLeft = 3;
+  rollButton.textContent = `Roll dice (${rollsLeft})`;
+  currentPlayer = "player1";
+  playerScores.player1 = new Array(14);
+  playerScores.player2 = new Array(14);
+  for (let i = 0; i < playerScoreCards.player1.length; i++) {
+    playerScoreCards.player1[i].textContent = "0";
+    playerScoreCards.player2[i].textContent = "0";
+    playerScoreCards.player1[i].classList.remove("clicked-cell");
+    playerScoreCards.player2[i].classList.remove("clicked-cell");
+    playerScoreCardsOpen.player1[i] = true;
+    playerScoreCardsOpen.player2[i] = true;
+  }
+  playerScoreCardsOpen.player1[6] = false;
+  playerScoreCardsOpen.player2[6] = false;
+  playerScoreTotals.player1 = 0;
+  playerScoreTotals.player2 = 0;
+  playerScoreTotalCells.player1.textContent = "0";
+  playerScoreTotalCells.player2.textContent = "0";
 });
