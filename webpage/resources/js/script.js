@@ -71,20 +71,27 @@ singleplayerButton.addEventListener("click", function () {
   multiplayer = false;
   gameSelector.classList.add("hidden");
   //Hide player 2 score card
-  if (!multiplayer) {
-    playerNames.player2.style.display = "none";
-    for (let i = 0; i < playerScoreCards.player2.length; i++) {
-      playerScoreCards.player2[i].style.display = "none";
-    }
-    playerScoreTotalCells.player2.style.display = "none";
-    scoreCardRows.forEach(function (element) {
-      element.style.gridTemplateColumns = "2fr 1fr";
-    });
+  playerNames.player2.style.display = "none";
+  for (let i = 0; i < playerScoreCards.player2.length; i++) {
+    playerScoreCards.player2[i].style.display = "none";
   }
+  playerScoreTotalCells.player2.style.display = "none";
+  scoreCardRows.forEach(function (element) {
+    element.style.gridTemplateColumns = "2fr 1fr";
+  });
 });
 multiplayerButton.addEventListener("click", function () {
   multiplayer = true;
   gameSelector.classList.add("hidden");
+  //Show player 2 score card
+  playerNames.player2.style.display = "flex";
+  for (let i = 0; i < playerScoreCards.player2.length; i++) {
+    playerScoreCards.player2[i].style.display = "flex";
+  }
+  playerScoreTotalCells.player2.style.display = "flex";
+  scoreCardRows.forEach(function (element) {
+    element.style.gridTemplateColumns = "2fr repeat(2, 1fr)";
+  });
 });
 
 //Roll dice
@@ -429,4 +436,9 @@ playAgainButton.addEventListener("click", function () {
   playerScoreTotals.player2 = 0;
   playerScoreTotalCells.player1.textContent = "0";
   playerScoreTotalCells.player2.textContent = "0";
+  for (let i = 0; i < dice.length; i++) {
+    dice[i].style.boxShadow = "0 0 0 5px red";
+  }
+  playerNames.player1.classList.add("player-turn");
+  playerNames.player2.classList.remove("player-turn");
 });
