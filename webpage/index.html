@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Score card -->
+      <div class="grid-container__item score-card">
+        <!-- Player names -->
+        <div id="score-card__row-players" class="score-card__row">
+          <div class="score-card__cell"></div>
+          <div class="score-card__cell player-turn">P1</div>
+          <div class="score-card__cell">P2</div>
+        </div>
+        <!-- Ones -->
+        <div id="score-card__row-ones" class="score-card__row">
+          <div class="score-card__cell">Ones</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Twos -->
+        <div id="score-card__row-twos" class="score-card__row">
+          <div class="score-card__cell">Twos</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Threes -->
+        <div id="score-card__row-threes" class="score-card__row">
+          <div class="score-card__cell">Threes</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Fours -->
+        <div id="score-card__row-fours" class="score-card__row">
+          <div class="score-card__cell">Fours</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Fives -->
+        <div id="score-card__row-fives" class="score-card__row">
+          <div class="score-card__cell">Fives</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Sixes -->
+        <div id="score-card__row-sixes" class="score-card__row">
+          <div class="score-card__cell">Sixes</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Bonus -->
+        <div id="score-card__row-bonus" class="score-card__row">
+          <div class="score-card__cell">Bonus</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Three of a Kind -->
+        <div id="score-card__row-toak" class="score-card__row">
+          <div class="score-card__cell">Three of a Kind</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Four of a Kind -->
+        <div id="score-card__row-foak" class="score-card__row">
+          <div class="score-card__cell">Four of a Kind</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Full House -->
+        <div id="score-card__row-fullhouse" class="score-card__row">
+          <div class="score-card__cell">Full House</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Small Straight -->
+        <div id="score-card__row-sstraight" class="score-card__row">
+          <div class="score-card__cell">Small Straight</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Large Straight -->
+        <div id="score-card__row-lstraight" class="score-card__row">
+          <div class="score-card__cell">Large Straight</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Chance -->
+        <div id="score-card__row-chance" class="score-card__row">
+          <div class="score-card__cell">Chance</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Yahtzee -->
+        <div id="score-card__row-yahtzee" class="score-card__row">
+          <div class="score-card__cell">Yahtzee!</div>
+          <div class="score-card__cell">0</div>
+          <div class="score-card__cell">0</div>
+        </div>
+        <!-- Total -->
+        <div id="score-card__row-total" class="score-card__row">
+          <div class="score-card__cell">Total</div>
+          <div id="score-card__cell-total-1" class="score-card__cell">0</div>
+          <div id="score-card__cell-total-2" class="score-card__cell">0</div>
+        </div>
+      </div>
+      <!-- Game area -->
+      <div class="grid-container__item game-area">
+        <div class="game-area__dice-area">
+          <!-- Dice -->
+          <div class="die-container">
+            <img class="die" src="resources/img/die-1.png" alt="die 1" />
+          </div>
+          <div class="die-container">
+            <img class="die" src="resources/img/die-2.png" alt="die 2" />
+          </div>
+          <div class="die-container">
+            <img class="die" src="resources/img/die-3.png" alt="die 3" />
+          </div>
+          <div class="die-container">
+            <img class="die" src="resources/img/die-4.png" alt="die 4" />
+          </div>
+          <div class="die-container">
+            <img class="die" src="resources/img/die-5.png" alt="die 5" />
+          </div>
+          <!-- Yahtzee logo -->
+          <img
+            id="yahtzee-logo"
+            src="resources/img/yahtzee.png"
+            alt="yahtzee"
+          />
+        </div>
+        <!-- Buttons -->
+        <div class="game-area__button-container">
+          <button class="game-area__button game-area__button-roll">
+            Roll dice (3)
+          </button>
+          <button class="game-area__button game-area__button-next" disabled>
+            Next turn
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Game selector Menu-->
+    <div class="game-selector">
+      <div class="modal-background"></div>
+      <div class="modal game-selector__modal">
+        <button
+          class="game-selector__modal-button game-selector__modal-button-single"
+        >
+          1 Player
+        </button>
+        <button
+          class="game-selector__modal-button game-selector__modal-button-multi"
+        >
+          2 Players
+        </button>
+      </div>
+    </div>
+    <!-- Game over screen -->
+    <div class="game-over hidden">
+      <div class="background"></div>
+      <div class="modal game-over__modal">
+        <h1>Game over!</h1>
+        <p id="game-over__modal__player-1"></p>
+        <p id="game-over__modal__player-2"></p>
+        <p id="game-over__modal__winner"></p>
+      </div>
+    </div>
+    <!-- JS -->
+    <script src="resources/js/script.js"></script>
+  </body>
+</html>

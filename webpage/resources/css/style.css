@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+script {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+
+  padding: 2.5vh 2.5vw;
+  width: 100vw;
+  height: 100vh;
+  background-color: blue;
+}
+
+.score-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(16, 1fr);
+
+  margin: 0 10px;
+  width: 300px;
+  height: 600px;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.score-card__row {
+  display: grid;
+  grid-template-columns: 2fr repeat(2, 1fr);
+
+  border-bottom: 1px solid black;
+}
+
+#score-card__row-players,
+#score-card__row-sixes,
+#score-card__row-bonus,
+#score-card__row-yahtzee {
+  border-bottom: 2px solid black;
+}
+
+.score-card__cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-left: 1px solid black;
+}
+
+.clicked-cell {
+  color: black;
+  background-color: rgb(200, 200, 200);
+}
+
+.clickable-cell {
+  color: red;
+}
+
+.clickable-cell:hover {
+  background-color: palevioletred;
+  cursor: pointer;
+}
+
+.player-turn {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.game-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+  margin: 0 10px;
+  width: 600px;
+  height: 600px;
+  background-color: green;
+  border: 3px dashed black;
+  border-radius: 5%;
+}
+
+.game-area__dice-area {
+  display: flex;
+  justify-content: space-evenly;
+
+  position: relative;
+  gap: 100px;
+  width: 90%;
+  height: 90%;
+}
+
+.die-container {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+  height: 100%;
+}
+
+.die {
+  position: absolute;
+  top: -400px;
+  width: 75px;
+  height: 75px;
+  transition: transform 0.5s ease;
+}
+
+.game-area__button-container {
+  display: flex;
+  justify-content: space-around;
+
+  width: 100%;
+}
+
+.game-area__button {
+  width: 170px;
+  height: 50px;
+  font-size: 1.5rem;
+  background-color: rgb(0, 200, 0);
+  border-radius: 10px;
+}
+
+.game-area__button:hover {
+  background-color: rgb(0, 255, 0);
+}
+
+.game-area__button:active,
+.game-area__button:disabled {
+  background-color: rgb(0, 150, 0);
+}
+
+#yahtzee-logo {
+  position: absolute;
+  width: 80%;
+  top: -300%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 1.5s ease;
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.game-selector__modal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.game-selector__modal-button {
+  width: 40%;
+  height: 90%;
+  font-size: 2.5rem;
+}
+
+.game-selector__modal-button:hover {
+  cursor: pointer;
+}
+
+.game-selector__modal-button-single {
+  background-color: blue;
+}
+
+.game-selector__modal-button-single:hover {
+  background-color: rgb(100, 100, 255);
+}
+
+.game-selector__modal-button-multi {
+  background-color: red;
+}
+
+.game-selector__modal-button-multi:hover {
+  background-color: rgb(255, 100, 100);
+}
+
+.game-over__modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.5rem;
+}
+
+@media (min-width: 2000px) {
+  .score-card {
+    width: 450px;
+    height: 900px;
+    font-size: 2rem;
+  }
+
+  .game-area {
+    width: 900px;
+    height: 900px;
+  }
+
+  .game-selector__modal-button {
+    font-size: 5rem;
+  }
+
+  .die {
+    width: 125px;
+    height: 125px;
+  }
+
+  .modal {
+    width: 1000px;
+    height: 1000px;
+  }
+
+  .game-area__button {
+    width: 340px;
+    height: 100px;
+    font-size: 3rem;
+  }
+
+  .game-over__modal {
+    font-size: 3rem;
+  }
+}
